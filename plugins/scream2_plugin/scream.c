@@ -178,6 +178,9 @@ int scream_receive (int *thisblocknr, uint8_t *buf, int buflen)
                 case 45:
                     blocknr = buf[GCF_BLOCK_LEN+2]*256 + buf[GCF_BLOCK_LEN+3];
                     break;
+                case 46:
+                    blocknr = buf[GCF_BLOCK_LEN+2]*256 + buf[GCF_BLOCK_LEN+3];
+                    break;
                 default:
                     fprintf(stderr, "Scream version ID = %d\n", buf[GCF_BLOCK_LEN]);
                     fatal (("Unknown version of scream protocol at remote end"));
